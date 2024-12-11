@@ -1,0 +1,173 @@
+/* تصاميم مرنة وعصرية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a4c9c, #1f1c2c);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: backgroundAnimation 15s ease infinite;
+}
+
+/* حركة الخلفية */
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #6a4c9c, #1f1c2c); }
+    50% { background: linear-gradient(135deg, #1f1c2c, #6a4c9c); }
+    100% { background: linear-gradient(135deg, #6a4c9c, #1f1c2c); }
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    animation: popUp 0.5s ease forwards;
+}
+
+/* تأثير البروز */
+@keyframes popUp {
+    0% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.title {
+    font-size: 3rem;
+    color: #fff;
+    animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* الرسالة الترحيبية */
+.welcome-message {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* التنسيق للعربية */
+.ar-welcome {
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* التنسيق للفرنسية */
+.fr-welcome {
+    display: block;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* أيقونات طبية */
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.icons i {
+    font-size: 2.5rem;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.icons i:hover {
+    transform: scale(1.2);
+}
+
+/* تصميم النموذج */
+.input-field {
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #4caf50;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* زر التقديم */
+.submit-btn {
+    padding: 15px;
+    font-size: 1.5rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: scale(1.1);
+    background-color: #45a049;
+}
+
+/* تصميم التصويت */
+.vote-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.vote-options input {
+    margin-right: 10px;
+    transform: scale(1.5);
+}
+
+/* نتائج التصويت */
+.results-section {
+    margin-top: 40px;
+}
+
+#vote-results p {
+    font-size: 1.4rem;
+    margin: 15px 0;
+}
+
+/* صفحة تسجيل الدخول */
+#login-section {
+    display: block;
+}
+
+/* التصويت بعد التسجيل */
+#voting-section {
+    display: none;
+}
+
+/* إخفاء صفحة التسجيل بعد التسجيل */
+#login-section.hidden {
+    display: none;
+}

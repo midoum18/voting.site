@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOREPINEPHRINE - تصويت إضراب الكرامة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">NOREPINEPHRINE</h1>
+            <p class="welcome-message">
+                <span class="ar-welcome">
+                    <strong>أهلاً بك في عالم الكرامة،</strong><br>
+                    <em>حيث صوتك هو الأمل، وقوتك في كلمتك.</em><br>
+                    <strong>سجل دخولك الآن، وانطلق مع الحق!</strong>
+                </span>
+                <span class="fr-welcome">
+                    <strong>Bienvenue dans le monde de la dignité,</strong><br>
+                    <em>votre voix est l'espoir, et votre force réside dans votre parole.</em><br>
+                    <strong>Connectez-vous maintenant et prenez part à la vérité !</strong>
+                </span>
+            </p>
+            <!-- أيقونات طبية -->
+            <div class="icons">
+                <i class="fas fa-plus-circle"></i>
+                <i class="fas fa-heartbeat"></i>
+                <i class="fas fa-first-aid"></i>
+            </div>
+        </header>
+
+        <!-- صفحة تسجيل الدخول -->
+        <div id="login-section">
+            <h2>تسجيل الدخول</h2>
+            <form id="login-form">
+                <input type="text" id="student-id" placeholder="رقم بطاقة الطالب" required class="input-field">
+                <input type="password" id="password" placeholder="كلمة المرور" value="NOREPINEPHRINE" readonly class="input-field">
+                <button type="submit" class="submit-btn"><i class="fas fa-sign-in-alt"></i> تسجيل الدخول</button>
+            </form>
+        </div>
+
+        <!-- صفحة التصويت بعد تسجيل الدخول -->
+        <div id="voting-section" class="voting-section" style="display: none;">
+            <h2 class="vote-question">هل ترغب في استمرار إضراب الكرامة؟</h2>
+            <form id="voting-form">
+                <label for="student-name">ادخل اسمك:</label>
+                <input type="text" id="student-name" placeholder="اسم الطالب" required class="input-field">
+
+                <label for="student-card">رفع بطاقة الطالب:</label>
+                <input type="file" id="student-card" accept="image/*" required class="input-field">
+
+                <div class="vote-options">
+                    <label>
+                        <input type="radio" name="vote" value="yes" required> نعم
+                    </label>
+                    <label>
+                        <input type="radio" name="vote" value="no"> لا
+                    </label>
+                </div>
+                <button type="submit" class="submit-btn"><i class="fas fa-vote-yea"></i> تصويت</button>
+            </form>
+        </div>
+
+        <!-- عرض نتائج التصويت -->
+        <div id="results-section" class="results-section">
+            <h3>الإحصائيات الحالية:</h3>
+            <div id="vote-results">
+                <p>نعم: <span id="yes-votes">0</span> (0%)</p>
+                <p>لا: <span id="no-votes">0</span> (0%)</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
